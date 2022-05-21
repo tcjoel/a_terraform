@@ -6,6 +6,6 @@ module "s3_bucket" {
 
 /* module "ecr_repository" {
   source = "git@github.com:tcjoel/a_terraform?ref=ecr"
-  bucket_name = myfirst-ecr-fromgit-22
+  ecr_name = "myfirst-ecr-fromgit-22"
 
 } */
