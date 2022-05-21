@@ -1,2 +1,3 @@
 variable "ecr_name" {
+    
 }
