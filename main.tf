@@ -1,13 +1,8 @@
-provider "aws" {
-  region = "us-east-2"
-}
-resource "aws_vpc" "my_vpc" {
-  cidr_block = "192.168.0.0/24"
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = var.bucket_name
+
   tags = {
-      Name = "test_vpc"
+    Name        = "first_bucket_create_from_git"
+    Environment = "Dev"
   }
-}
-resource "aws_subne" "pub_subnet" { 
-  vpc_id = aws_vpc.my_vpc.id
-  cidr_block = "192.168.0.0/26"
 }
