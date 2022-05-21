@@ -1,13 +1,11 @@
-provider "aws" {
-  region = "us-east-2"
+module "s3_bucket" {
+  source = "git@github.com:tcjoel/a_terraform?ref=s3"
+  bucket_name = my_first_bucket_from_git_22
+
 }
-resource "aws_vpc" "my_vpc" {
-  cidr_block = "192.168.0.0/24"
-  tags = {
-      Name = "test_vpc"
-  }
-}
-resource "aws_subne" "pub_subnet" { 
-  vpc_id = aws_vpc.my_vpc.id
-  cidr_block = "192.168.0.0/26"
+
+module "ecr_repository" {
+  source = "git@github.com:tcjoel/a_terraform?ref=ecr"
+  bucket_name = my_first_ecr_from_git_22
+
 }
