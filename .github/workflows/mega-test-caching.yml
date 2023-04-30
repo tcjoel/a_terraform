@@ -8,7 +8,7 @@ name: MegaLinter
 #         required: true
 on:
   push:
-  pull-request: 
+  pull_request: 
      branches: [dev]
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
