@@ -34,5 +34,5 @@ jobs:
           path: /usr/bin/docker
           key: mega-cache-${{ hashFiles('oxsecurity/megalinter:v6**') }}
       - name: MegaLinter
-        id: ml
+        id: mlt
         uses: oxsecurity/megalinter@v6
