@@ -7,7 +7,6 @@ name: MegaLinter
 #       TEST_SECRET:
 #         required: true
 on:
-  push:
   pull_request:
      branches: [dev]
 concurrency:
