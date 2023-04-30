@@ -9,7 +9,7 @@ name: MegaLinter
 on:
   push:
   pull-request: 
-     branches: [main]
+     branches: [dev]
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
