@@ -28,6 +28,11 @@ jobs:
             mv megalinter-config/mega/.mega-linter.yml .
             ls -al
       # To do the linting of our code with MegaLinter
+      - name: Caching megalinter image
+        uses: actions/cache@v3
+        with:
+          path: /usr/bin/docker
+          key: mega-cache-${{ hashFiles('oxsecurity/megalinter:v6**') }}
       - name: MegaLinter
         id: ml
         uses: oxsecurity/megalinter@v6
